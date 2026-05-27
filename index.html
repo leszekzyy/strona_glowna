@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wyszukiwarka adresów</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: url("mapa-sepia.jpg") center/cover no-repeat fixed;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .tiles {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .tile {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      padding: 30px 25px;
+      text-align: center;
+      flex: 1 1 260px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      text-decoration: none;
+      color: #222;
+    }
+
+    .tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .tile img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+    .icon-large {
+      width: 300px !important;
+      height: 300px !important;
+    }
+    .tile-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .tile-subtitle {
+      font-size: 14px;
+      color: #555;
+    }
+	
+  </style>
+</head>
+<body>
+  <h1>Wyszukiwarka adresów</h1>
+
+  <div class="tiles">
+    <a href="https://leszekzyy.github.io/wyszukiwarka-adresow/" class="tile">
+      <img src="Ikona 1.jpg" alt="Ikona wyszukiwania adresu" class="icon-large">
+      <div class="tile-title">Wyszukiwanie adresu za pomocą kodu</div>
+      <div class="tile-subtitle">Podaj kod pocztowy, aby znaleźć odpowiadający mu adres.</div>
+    </a>
+
+    <a href="#wyszukiwanie-kodu" class="tile">
+      <img src="Ikona 2.jpg" alt="Ikona wyszukiwania kodu" class="icon-large">
+      <div class="tile-title">Wyszukiwanie kodu za pomocą adresu</div>
+      <div class="tile-subtitle">Wpisz adres, aby odszukać właściwy kod pocztowy.</div>
+    </a>
+  </div>
+</body>
+</html>
